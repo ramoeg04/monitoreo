@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<body class="login-display">
+    <mat-card>
+        <mat-card-content>
+            <img mat-card-image src="../../../../assets/img/logo.png" class="img-fluid" alt="">
+            <h1 class="mt-2 mb-4">{{title.sesion}}</h1>
+
+            <form [formGroup]="loginForm">
+                <div class="row">
+                    <mat-form-field appearance="legacy">
+                        <mat-label class="font">Email</mat-label>
+                        <input type="email" matInput formControlName="email" name="email" placeholder="Ingrese Email" 
+                            autofocus>
+                        <mat-error ngxErrors="loginForm.email">
+                            <p ngxError="email"> {{title.email}}</p>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row mt-3">
+                    <mat-form-field appearance="legacy">
+                        <mat-label class="font">Password</mat-label>
+                        <input type="Password" matInput formControlName="password" name="password"
+                            placeholder="Ingrese Contraseña">
+                        <mat-error ngxErrors="loginForm.password">
+                            <p ngxError="minLength"> {{title.password}}</p>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row mt-3 btn login-display">
+                    <button mat-raised-button id="button" routerLink="home" (click)="login()">
+                        <mat-label class="font">Enviar</mat-label>
+                    </button>
+                </div>
+            </form>
+
+        </mat-card-content>
+    </mat-card>
+</body>
+
+</html>

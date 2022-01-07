@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../src/assets/styles/colors.scss";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+//Login//
+.login-display {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+//letras//
+.font {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+//Botones//
+#button {
+    background-color: $blue3;
+    border-radius: 2em;
+}
