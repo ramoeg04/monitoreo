@@ -1,1 +1,43 @@
-<app-nav></app-nav>
+<mat-toolbar class="color">
+    <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <img src="../../../../assets/img/logo_navbar.png" class="img-fluid">
+    <button type="button" mat-button routerLink="/login">
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-drawer-container class="drawer " autosize>
+    <mat-drawer #drawer class="sidenav color2" mode="side">
+        <mat-selection-list [multiple]="false">
+            <mat-list-option>
+                <span (click)="componets='Dashboard'">Dashboard</span>
+            </mat-list-option>
+            <mat-list-option>
+                <span (click)="componets='Servidores'">Servidores</span>
+            </mat-list-option>
+            <mat-list-option>
+                <span (click)="componets='Comando'">Ejecutar Comando</span>
+            </mat-list-option>
+            <mat-list-option>
+                <span (click)="componets='Usuario'">Usuario</span>
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-drawer>
+
+    <div class="display" *ngIf="componets === 'Dashboard' || componets === '' ">
+        <app-cards></app-cards>
+    </div>
+    <div class="display" *ngIf="componets === 'Servidores'">
+        bbbb
+    </div>
+    <div class="display" *ngIf="componets === 'Comando'">
+        ccccc
+    </div>
+    <div class="display" *ngIf="componets === 'Usuario'">
+        <app-user-list></app-user-list>
+    </div>
+
+</mat-drawer-container>

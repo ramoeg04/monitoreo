@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
@@ -9,16 +9,23 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { CreateComponent } from './components/users/create/create.component';
 import { EditComponent } from './components/users/edit/edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './components/shared/nav/nav.component';
 import { GraphicsComponent } from './components/dashboard/graphics/graphics.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { CardsComponent } from './components/dashboard/cards/cards.component';
 
 //Angular Material//
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,10 +33,11 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
     UserListComponent,
     CreateComponent,
     EditComponent,
-    NavComponent,
     GraphicsComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    CardsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,11 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
